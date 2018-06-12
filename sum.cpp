@@ -8,8 +8,6 @@ int main(int argc, char** argv){
     
     // Print out the sum.
     
-    //ljaslkjflaksjfd
-    
     
     return 0;
 }
