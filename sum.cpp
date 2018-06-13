@@ -12,6 +12,7 @@ int main(int argc, char** argv){
     return 0;
 }
 
-float sum(string line, int column, float currentSum){
+float getColumnValueAsFloat(string line, int column){
     return 0;
 }
+
