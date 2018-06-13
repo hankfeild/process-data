@@ -16,3 +16,7 @@ float getColumnValueAsFloat(string line, int column){
     return 0;
 }
 
+float sum(string line, int column, float currentSum){
+	return getColumnValueAsFloat(line, column) + currentSum;
+}
+
