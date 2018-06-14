@@ -1,3 +1,7 @@
+// File:    sum.cpp
+// Author:  Hank Feild
+// Usage:   sum <file> <column>
+//
 #include <iostream>
 using namespace std;
 
