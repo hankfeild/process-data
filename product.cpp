@@ -1,16 +1,16 @@
-// File:    sum.cpp
+// File:    product.cpp
 // Author:  Hank Feild
-// Usage:   sum <file> <column>
+// Usage:   product <file> <column>
 //
 #include <iostream>
 using namespace std;
 
 int main(int argc, char** argv){
-    // Read in data filename and column to sum.
+    // Read in data filename and column to multiply.
     
-    // Read through data file, summing values in given column.
+    // Read through data file, multiplying values in given column.
     
-    // Print out the sum.
+    // Print out the product.
     
     
     return 0;
@@ -20,7 +20,6 @@ float getColumnValueAsFloat(string line, int column){
     return 0;
 }
 
-float sum(string line, int column, float currentSum){
-    return getColumnValueAsFloat(line, column) + currentSum;
+float product(string line, int column, float currentProduct){
+	return getColumnValueAsFloat(line, column) * currentSum;
 }
-
