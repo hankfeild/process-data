@@ -8,6 +8,7 @@ using namespace std;
 int main(int argc, char** argv){
     // Read in data filename and column to multiply.
     
+    
     // Read through data file, multiplying values in given column.
     
     // Print out the product.
