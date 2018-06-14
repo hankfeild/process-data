@@ -1,6 +1,6 @@
-// File:    product.cpp
+// File:    sum.cpp
 // Author:  Hank Feild
-// Usage:   product <file> <column>
+// Usage:   sum <file> <column>
 //
 #include <iostream>
 #include <fstream>
@@ -9,17 +9,17 @@
 using namespace std;
 
 float getColumnValueAsFloat(string line, int column);
-float product(string line, int column, float currentProduct);
+float sum(string line, int column, float currentSum);
 vector<string>* getCSVCols(string line);    
 
 int main(int argc, char** argv){
     if(argc < 3){
         cerr << "Error: too few arguments." << endl;
-        cerr << "Usage: product <file> <column>" << endl;
+        cerr << "Usage: sum <file> <column>" << endl;
         return 1;
     }
     
-    // Read in data filename and column to multiply.
+    // Read in data filename and column to sum.
     char* filename = argv[1];
     int column = atoi(argv[2]);
     
@@ -28,18 +28,18 @@ int main(int argc, char** argv){
         return 1;
     }
     
-    // Read through data file, multiplying values in given column.
-    float runningProduct = 0;
+    // Read through data file, summing values in given column.
+    float runningSum = 0;
     string line;
     ifstream fin(filename);
     while(fin.good()){
         getline(fin, line);
-        runningProduct = product(line, column, runningProduct);
+        runningSum = sum(line, column, runningSum);
     }
     fin.close();
     
-    // Print out the product.
-    cout << runningProduct << endl;
+    // Print out the sum.
+    cout << runningSum << endl;
     
     return 0;
 }
@@ -54,8 +54,8 @@ float getColumnValueAsFloat(string line, int column){
     return atof((*columns)[column-1].c_str());
 }
 
-float product(string line, int column, float currentProduct){
-    return getColumnValueAsFloat(line, column) * currentProduct;
+float sum(string line, int column, float currentSum){
+	return getColumnValueAsFloat(line, column) + currentSum;
 }
 
 vector<string>* getCSVCols(string line){
